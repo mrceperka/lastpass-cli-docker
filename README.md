@@ -20,6 +20,6 @@ docker exec -it lastpass-cli lpass login foo@example.com
 alias lpass="docker exec -it lastpass-cli lpass $*"
 # sshpass
 function ls_ssh_www1() {
-	SSHPASS=$(docker exec -it lastpass-cli lpass show --password <id>) sshpass -e ssh www1
+  SSHPASS=$(lpass show --password <id>) sshpass -e ssh www1
 }
 ```
